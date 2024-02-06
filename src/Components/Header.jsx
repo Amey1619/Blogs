@@ -1,10 +1,9 @@
-
 function Header() {
   return (
     <div className="pt-24 px-12 mx-auto max-w-7xl">
       <div className="w-full mx-auto text-left md:w-11/12 xl:w-12/12 md:text-center">
         <p className="px-0 mb-4 text-3xl font-bold text-gray-800">
-          Bits-0f-C0de
+          React Blogs
         </p>
         <h1 className="mb-8 text-8xl font-bold text-gray-1200">
           <span>Explore</span>{" "}
@@ -18,4 +17,4 @@ function Header() {
   );
 }
 
-export default Header
+export default Header;
