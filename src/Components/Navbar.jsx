@@ -4,27 +4,27 @@ import { AiOutlineGoogle } from "react-icons/ai";
 import { Link } from "react-router-dom";
 function Navbar() {
   return (
-    <header className="w-8xl bg-white border-t-4 border-indigo-600">
-      <nav className="mx-1 flex fixed w-full px-4 py-6 shadow">
+    <header className="w-xl bg-white fixed top-0 left-0 z-10">
+      <nav className="mx-0 bg-white flex fixed w-full px-4 py-6 shadow border-t-4 border-indigo-600">
         <div className="mx-3 flex">
-          <a className="mx-1 flex items-center justify-between hover:text-indigo-600 cursor-pointer">
+          <div className="mx-1 flex items-center justify-between hover:text-indigo-600 cursor-pointer">
             <span className="font-semibold">
               <BiTerminal className="text-3xl" />
             </span>
             <span className=" mx-2 text-2xl font-semibold">
               <Link to="/">Blogs</Link>
             </span>
-          </a>
+          </div>
         </div>
         <div className="mx-2 flex-1">
-          <a className="mx-1 flex items-center hover:text-indigo-600 cursor-pointer">
+          <div className="mx-1 flex items-center hover:text-indigo-600 cursor-pointer">
             <span className="font-semibold">
               <CgUserlane className="text-3xl" />
             </span>
             <span className=" mx-2 text-2xl font-semibold">
               <Link to="/about">About me</Link>
             </span>
-          </a>
+          </div>
         </div>
         <div className="flex">
           <a className="mr-5 flex items-center justify-end hover:text-indigo-600">

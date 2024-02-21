@@ -7,7 +7,7 @@ function About() {
   return (
     <>
       <Navbar />
-      <div className="mt-8 max-w-2xl pt-24 pb-28 px-8 text-center mx-auto">
+      <div className="mt-5 mb-1 max-w-2xl pt-24 pb-28 px-8 text-center mx-auto">
         <div className="mt-8 h-64 w-full justify-center flex">
           <img src={aboutpic} className="h-64 w-auto" />
         </div>
