@@ -1,7 +1,7 @@
 import aboutpic from "../../assets/about.png";
 import { FaLaptop, FaLinkedin } from "react-icons/fa";
-import Navbar from "../Navbar";
-import Footer from "../Footer";
+import Navbar from "../Navbar/Navbar"
+import Footer from "../Footer/Footer"
 
 function About() {
   return (

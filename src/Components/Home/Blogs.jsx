@@ -1,6 +1,6 @@
-import Header from "../Header";
-import Navbar from "../Navbar";
-import Footer from "../Footer";
+import Header from "../Header/Header";
+import Navbar from "../Navbar/Navbar";
+import Footer from "../Footer/Footer";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import SinglePost from "../Cards/SinglePost";
@@ -11,7 +11,6 @@ function Blogs() {
     const fetchpost= async()=>{
       try{
         const response = await axios.get(`http://localhost:5000/`);
-        console.log("Everything works perfectly fine 'FOR NOW'");
         setBlogs(response.data);
       }
       catch(error){

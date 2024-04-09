@@ -1,0 +1,9 @@
+.markdown-content p {
+  margin-bottom: 16px;
+}
+
+.markdown-content h2, .markdown-content h4 {
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+
