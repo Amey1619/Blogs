@@ -1,18 +1,17 @@
 /* eslint-disable react/prop-types */
 function Toc({ headings }) {
   const scrollToElement = (id) => (event) => {
-    event.preventDefault();
-    const element = document.getElementById(id);
-    if (element) {
-      const offset = -84;
-      const elementPosition =
-        element.getBoundingClientRect().top + window.pageYOffset;
-      window.scrollTo({
-        top: elementPosition + offset,
-        behavior: "smooth",
-      });
-    }
-  };
+  event.preventDefault();
+  const element = document.getElementById(id);
+  if (element) {
+    const offset = -84;
+    const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+    window.scrollTo({
+      top: elementPosition + offset,
+      behavior: "smooth",
+    });
+  }
+};
 
   return (
     <nav className="sticky top-32 overflow-auto toc-inner">
