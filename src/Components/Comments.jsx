@@ -109,7 +109,12 @@ function Comments({ Id }) {
     try {
       const commentRef = doc(db, "posts", Id, "comments", commentID);
       await deleteDoc(commentRef);
-      // Update local state by filtering out the deleted comment
+      setAlertMessage("Comment deleted successfully");
+      setAlertType("success");
+      setViewAlert(true);
+      setTimeout(() => {
+        setViewAlert(false);
+      }, 2000);
       setComments(comments.filter((comment) => comment.id !== commentID));
     } catch (error) {
       console.error("Error deleting comment: ", error);
