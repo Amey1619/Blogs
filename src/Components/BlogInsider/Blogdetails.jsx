@@ -6,6 +6,8 @@ import { BsThreeDots } from "react-icons/bs";
 import ReactMarkdown from "react-markdown";
 import Toc from "../TOC/Toc";
 import "./Style.css";
+import LikeBtn from "../LikeBtn";
+import Comments from "../Comments";
 
 function BlogDetails() {
   const { selectedBlog, selectedData } = useBlogContext();
@@ -140,6 +142,8 @@ function BlogDetails() {
           <Toc headings={headings} />
         </div>
       </div>
+      <LikeBtn  Id={String(selectedData.Id)} />
+      <Comments Id={String(selectedData.Id)} />
       <Footer />
     </>
   );

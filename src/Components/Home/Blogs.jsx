@@ -7,10 +7,11 @@ import SinglePost from "../Cards/SinglePost";
 
 function Blogs() {
   const [blogs,setBlogs]=useState([]);
+  const api = import.meta.env.VITE_BACKEND_API;
   useEffect(()=>{
     const fetchpost= async()=>{
       try{
-        const response = await axios.get(`http://localhost:5000/`);
+        const response = await axios.get(api);
         setBlogs(response.data);
       }
       catch(error){
@@ -18,7 +19,7 @@ function Blogs() {
       }
     };
     fetchpost(); 
-  },[])
+  },[api])
   return (
     <>
       <Navbar />
