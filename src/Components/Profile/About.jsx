@@ -31,7 +31,7 @@ function About() {
             <a
               rel="noopener noreferrer"
               target="_blank"
-              href="https://github.com/Amey1619"
+              href="https://my-portfolio-amey-iiit-12.vercel.app/"
             >
               See My Works
             </a>
