@@ -79,7 +79,7 @@ npm start
 
 Create a `.env` file setup your required environment variables.
 
-Open [http://localhost:3000](http://localhost:5173) with your browser to see the result.
+Open [http://localhost:5173](http://localhost:5173) with your browser to see the result.
 
 ## Usage Instructions
 
