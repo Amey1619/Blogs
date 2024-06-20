@@ -62,52 +62,49 @@ function Navbar() {
       });
   };
 
-  return (
-    <>
-      <Alert show={viewAlert} type="success" message={alertMessage} />
-      <header className="w-xl bg-white fixed top-0 left-0 z-10">
-        <nav className="mx-0 bg-white flex fixed w-full px-4 py-6 shadow border-t-4 border-indigo-600">
-          <div className="mx-3 flex">
-            <div className="mx-1 flex items-center justify-between hover:text-indigo-600 cursor-pointer">
-              <span className="font-semibold">
-                <BiTerminal className="text-3xl" />
-              </span>
-              <span className=" mx-2 text-2xl font-semibold">
-                <Link to="/">Blogs</Link>
-              </span>
-            </div>
+return (
+  <>
+    <Alert show={viewAlert} type="success" message={alertMessage} />
+    <header className="fixed w-full bg-white top-0 left-0 z-10 shadow border-t-4 border-indigo-600">
+      <nav className="bg-white flex items-center justify-between w-full px-4 py-6 shadow">
+        <div className="flex items-center hover:text-indigo-600 cursor-pointer">
+          <span className="font-semibold">
+            <BiTerminal className="text-3xl" />
+          </span>
+          <span className="mx-2 text-2xl font-semibold">
+            <Link to="/">Blogs</Link>
+          </span>
+        </div>
+        <div className="flex items-center space-x-4">
+          <div className="flex items-center hover:text-indigo-600 cursor-pointer">
+            <span className="font-semibold">
+              <CgUserlane className="text-3xl" />
+            </span>
+            <span className="mx-2 text-2xl font-semibold">
+              <Link to="/about">About me</Link>
+            </span>
           </div>
-          <div className="mx-2 flex-1">
-            <div className="mx-1 flex items-center hover:text-indigo-600 cursor-pointer">
-              <span className="font-semibold">
-                <CgUserlane className="text-3xl" />
+          <button
+            className="flex items-center justify-end cursor-pointer hover:text-indigo-600"
+            onClick={isLogin ? handleSignOut : handleSignIn}
+          >
+            <span className="flex items-center">
+              <span className="hidden md:block text-xl font-semibold">
+                {isLogin ? "Sign Out" : "Sign In"}
               </span>
-              <span className=" mx-2 text-2xl font-semibold">
-                <Link to="/about">About me</Link>
-              </span>
-            </div>
-          </div>
-          <div className="flex">
-            <button
-              className="mr-5 flex items-center justify-end cursor-pointer hover:text-indigo-600"
-              onClick={isLogin ? handleSignOut : handleSignIn}
-            >
-              <span className="md:flex items-center">
-                <span className="hidden md:block text-xl font-medium">
-                  {isLogin ? "Sign Out" : "Sign In"}
-                </span>
-                {isLogin ? (
-                  <IoLogOutOutline className="text-xl mx-1" />
-                ) : (
-                  <AiOutlineGoogle className="text-xl mx-1" />
-                )}
-              </span>
-            </button>
-          </div>
-        </nav>
-      </header>
-    </>
-  );
+              {isLogin ? (
+                <IoLogOutOutline className="text-xl mx-1" />
+              ) : (
+                <AiOutlineGoogle className="text-xl mx-1" />
+              )}
+            </span>
+          </button>
+        </div>
+      </nav>
+    </header>
+  </>
+);
+
 }
 
 export default Navbar;

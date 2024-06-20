@@ -39,29 +39,29 @@ function BlogDetails() {
   return (
     <>
       <Navbar />
-      <div className="mx-auto flex max-w-screen-xl mt-24 mb-7">
-        <div className="flex-grow rounded-lg shadow-lg bg-white pb-6 px-1">
+      <div className="mx-auto flex flex-col lg:flex-row max-w-screen-xl mt-24 mb-7">
+        <div className="flex-grow rounded-lg shadow-lg bg-white pb-6 px-1 lg:mr-4">
           <img
-            className="object-cover w-50 h-65"
+            className="object-cover w-full h-65"
             src={selectedData.HeaderImage}
             alt="Article Image"
           />
           <div className="p-3">
             <div className="flex flex-col items-center">
-              <div className="flex">
+              <div className="flex flex-wrap items-center">
                 {selectedData.Tags.split(" ").map((tag) => (
                   <p
                     key={tag}
-                    className="inline-block px-2 ml-3 py-1 mb-4 text-xs font-semibold tracking-wider text-gray-50 uppercase rounded-full bg-indigo-500"
+                    className="inline-block px-2 ml-1 my-1 py-1 text-xs font-semibold tracking-wider text-gray-50 uppercase rounded-full bg-indigo-500"
                   >
                     {tag}
                   </p>
                 ))}
               </div>
-              <h2 className="block mt-2 text-2xl sm:text-4xl font-semibold text-gray-800">
+              <h2 className="block mt-2 text-2xl sm:text-4xl font-semibold text-gray-800 text-center">
                 {selectedData.Title}
               </h2>
-              <p className="text-5xl pt-2">
+              <p className="text-5xl pt-2 text-center">
                 <BsThreeDots />
               </p>
               <article className="prose prose-lg w-full py-7 max-w-2xl markdown-content">
@@ -138,11 +138,11 @@ function BlogDetails() {
             </div>
           </div>
         </div>
-        <div className="toc ml-4 w-full mr-0 max-w-sm">
+        <div className="toc hidden lg:block lg:w-1/2 ml-4">
           <Toc headings={headings} />
         </div>
       </div>
-      <LikeBtn  Id={String(selectedData.Id)} />
+      <LikeBtn Id={String(selectedData.Id)} />
       <Comments Id={String(selectedData.Id)} />
       <Footer />
     </>

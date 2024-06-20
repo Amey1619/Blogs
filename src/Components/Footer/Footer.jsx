@@ -2,36 +2,41 @@ import { SiGithub } from "react-icons/si";
 import { FiLinkedin } from "react-icons/fi";
 
 function Footer() {
-    const date = new Date();
-    const year = date.getFullYear();
+  const date = new Date();
+  const year = date.getFullYear();
   return (
-    <footer className="relative w-full -bottom-0">
+    <footer className="relative w-full bottom-0">
       <div className="bg-indigo-600">
-        <div className="mx-1 py-2 px-3 flex">
-          <p className="text-gray-50 text-xl flex text-center items-left">
+        <div className="flex flex-col md:flex-row items-center justify-between mx-auto py-4 px-6 md:px-12">
+          <p className="text-gray-50 text-center md:text-left text-lg md:text-xl">
             © {year} Bits-Of-C0de —
-            <a className="text-gray-50 ml-1" target="_blank">
+            <a
+              className="text-gray-50 ml-1"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="#"
+            >
               @ameygupta
             </a>
           </p>
-          <span className="inline-flex ml-auto mr-2 mt-2 justify-end">
+          <div className="inline-flex mt-2 md:mt-0">
             <a
-              className="ml-6 text-gray-50"
+              className="ml-3 text-gray-50"
               href="https://github.com/Amey1619"
               rel="noopener noreferrer"
               target="_blank"
             >
-              <SiGithub className="text-xl" />
+              <SiGithub className="text-2xl" />
             </a>
             <a
-              className="ml-4 text-gray-50"
+              className="ml-3 text-gray-50"
               href="https://www.linkedin.com/in/amey-gupta-282763210/"
               rel="noopener noreferrer"
               target="_blank"
             >
-              <FiLinkedin className="text-xl" />
+              <FiLinkedin className="text-2xl" />
             </a>
-          </span>
+          </div>
         </div>
       </div>
     </footer>
